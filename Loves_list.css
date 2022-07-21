@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ede7f6;
+}
+
+#loveheader {
+    width: 100%;
+    margin-top: 200px;
+    /* border: 1px solid red; */
+    background-color: white;
+}
+
+#loveheader>div {
+    width: 65%;
+    /* border: 1px solid blueviolet; */
+    padding: 20px 0px 15px 15px;
+    margin: auto;
+}
+
+#loveheader>div>a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+#loveheader>div>h1 {
+    margin-top: 10px;
+    font-weight: normal;
+}
+
+#lovedOnce {
+    width: 100%;
+    margin-top: 10px;
+    background-color: white;
+}
+
+#temp {
+    width: 32%;
+    margin: auto;
+    padding: 55px 0px 30px 0px;
+
+}
+
+#temp>img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    margin-bottom: 33px;
+}
+
+#loves_list_details {
+    font-weight: bold;
+    text-align: center;
+}
+#howToAddIntoLovesList{
+    text-align: center;
+}
+#howToAddIntoLovesList>img {
+    width: 16px;
+}
+#testing{
+    width: 30px;
+}
+.productInsideLoves{
+    width: 65%;
+    margin: auto;
+    padding: 15px;
+    border-top: 1px solid rgb(194, 191, 191);
+    border-bottom: 1px solid rgb(187, 186, 186);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.productInsideLoves > img{
+    width: 10%;
+}
+.alldescription > p:nth-child(1){
+    font-weight: bold;
+}
+.alldescription > p:nth-child(2){
+    font-weight: normal;
+    font-size: 18px;
+}
+.alldescription > p:nth-child(3){
+   font-size: 17px;
+   color: rgb(131, 129, 129);
+}
+.alldescription > p:nth-child(4){
+    font-size: 17px;
+    color: rgb(131, 129, 129);
+}
+.alldescription > p:nth-child(5){
+    font-size: 11px;
+    font-weight: normal;
+}
+#addtocartbutton{
+    width: 20%;
+    height: 45px;
+    font-weight: bold;
+    border: none;
+    background-color: rgb(201, 8, 8);
+    color: white;
+    border-radius: 22px;
+}
+#addtocartbutton:hover{
+    background-color: rgb(223, 8, 8);
+}
+.removefromloves{
+    background-color: white;
+    border: none;
+}
+.removefromloves > i{
+    width: 5%;
+}
+.topboxloves{
+    width: 65%;
+    margin: auto;
+    display: flex;
+    justify-content:space-between;
+    padding:20px;
+}
+.topboxloves > div:nth-child(1){
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+.topboxloves > div:nth-child(2){
+    display: flex;
+    align-items: center;
+}
+.topboxloves > div:nth-child(1) > img{
+    width: 40px;
+    height: 30px;
+    margin-right : 10px;
+}
