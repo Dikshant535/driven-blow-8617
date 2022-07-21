@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-style: inherit; */
+}
+body {
+    background-color: #f1f8e9;
+}
+.container {
+    width: 30%;
+    margin: auto;
+    margin-top: 50px;
+    background-color: white;
+    
+    /* padding: 20px; */
+    /* border: 1px solid red; */
+
+}
+
+#signup_heading {
+    width: 100%;
+    padding: 20px;
+    /* border: 1px solid rgb(0, 17, 255); */
+    text-align: center;
+}
+
+#signup_form {
+    width: 100%;
+    padding: 20px;
+    border-top: 1px solid rgb(142, 143, 145);
+}
+
+#form>img:nth-child(1) {
+    width: 45%;
+    margin-bottom: 15px;
+}
+
+#signup_reward_information {
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+input::placeholder {
+    font: 15px sans-serif;
+}
+
+#form {
+    padding: 20px;
+    border-top: 1px solid rgb(212, 213, 216);
+    border-bottom: 1px solid rgb(212, 213, 216);
+}
+
+.halfwidth {
+    width: 49%;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.fullwidth {
+    width: 98%;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+#birthdayGift {
+    font-weight: 700;
+    font-size: 17px;
+    margin-bottom: 10px;
+    font-family: inherit;
+}
+
+#keepmesignin {
+    display: flex;
+}
+
+#keepmesignin>p {
+    font-size: 17px;
+    margin-right: 10px;
+}
+
+#checkbox_signin {
+    width: 5%;
+    height: 23px;
+    background-color: white;
+    margin-right: 10px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 320px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+#joinnowbutton{
+    width: 45%;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    margin-top: 25px;
+}
+#termandconditionone{
+    margin: 25px 20px 0px 20px;
+    font-size: 13px;
+    color: #797777;
+}
+#termandconditionone > a{
+    color: rgb(38, 143, 203);
+}
+#termandconditiontwo{
+    margin: 15px 20px 0px 20px;
+    font-size: 13px;
+    color: #797777;
+}
+#termandconditiontwo > a{
+    color: rgb(38, 143, 203);
+}
