@@ -12,11 +12,10 @@
 #search_bar{
     display: flex;
     justify-content:space-around;
-    border: 1px solid green;
     align-items: center;
-    width: 80%;
+    width: 85%;
     margin: auto;
-    
+    height: 100px;
 }
 #bag_div{
     display: flex;
@@ -26,22 +25,61 @@
     width:10%;
 }
 #logo>img{
-    width:150px
+    width:150px;
+    cursor: pointer;
 }
 #input_box>input{
-    width:400px;
-    height: 30px;
+    width:350px;
+    padding: 10px;
     border-radius: 20px;
     background-color: rgb(239, 239, 239);
     border: none;
-    font-size: 25px;
+    margin-left: -5px;
 }
-#services>p:nth-child(1){
+#services{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: -50px;
+    cursor: pointer;
+}
+#services>div{
+   margin-left: 15px;
+}
+#services>div>p:nth-child(1){
     font-weight: bold;
     margin-bottom: -2px;
+    color: black;
 }
-#services>p:nth-child(2){
+#services>div>p:nth-child(2){
     margin-top: 2px;
     color: rgb(169, 167, 167);
     font-size: 14px;
+}
+#community,#signin{
+    display: flex;
+    align-items: center;
+    margin-left: -5px;
+    cursor: pointer;
+}
+#community,#signin>img{
+    margin-right: 10px;
+}
+#community>p{
+    color: black;
+}
+#below_inputbar{
+    display: flex;
+    justify-content: space-around;
+    width:85%;
+    align-items: center;
+    margin: auto;
+    background-color: black;
+}
+#below_inputbar>p{
+    color: white;
+    cursor: pointer;
+}
+#menubar{
+    background-color: black;
 }

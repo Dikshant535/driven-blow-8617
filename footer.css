@@ -1,0 +1,127 @@
+#feedbackDiv{
+    display: flex;
+    text-align: center;
+    background-color: #CCCCCC;
+    height: 60px;
+    justify-content: center;
+}
+#feedbackDiv>h4:hover{
+   text-decoration: underline;
+   cursor: default;
+}
+#foot{
+    background-color: black;
+}
+#below_footer>div{
+    display: flex;
+    justify-content: space-around;
+    width: 85%;
+    margin: auto;
+}
+#below_footer>div>.tags{
+    height: 40px;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.tags{
+    display: flex;
+    align-items: center;
+}
+.tags>img{ 
+    margin-right: 40px;
+ }
+.tags>div>p:nth-child(1){
+    color:white;
+    margin:10px 0px -10px -30px;
+    font-size: 14px;
+}
+.tags>div>p:nth-child(1):hover{
+    text-decoration: underline;
+    cursor: default;
+}
+.tags>div>p:nth-child(2){
+    color:white;
+    margin-left:-30px ;
+    font-size: 13px;
+}
+hr{
+    color: white;
+    width: 85%;
+}
+#about{
+    display: flex;
+    width: 85%;
+    margin: auto;
+    justify-content: space-around;
+}
+#about>div{
+    width:25%;
+}
+.flags{
+    display: flex;
+}
+.language>h3{
+    color: white;
+}
+.flags>img{
+    width:25px;
+    margin-right: 5px;
+}
+.about_txt>p:hover{
+   text-decoration: underline;
+   cursor: default;
+}
+.about_txt>p{
+    font-size: 13px;
+    color: white;
+}
+.language>div>p{
+    font-size: 13px;
+    color: white;
+}
+.about_txt>h3{
+    color: white;
+}
+.language>div>p:hover{
+    text-decoration: underline;
+   cursor: pointer;
+}
+.mailbox>div>h3{
+    color: white;
+}
+.mailbox>div>h1{
+    font-size: 30px;
+    color: white;
+    font-weight: lighter;
+}
+.mailbox>div:last-child{
+    justify-items: end ;
+}
+.mailbox>div>button{
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    border:2px solid white
+}
+#lastdiv{
+    width:85%;
+    margin: auto;
+    margin-top: 30px;
+}
+#lastdiv>div>p,div>p{
+    color: white;
+    font-size: 13px;
+    
+}
+#lastdiv>div>div{
+    display: flex;
+    gap: 10px;
+
+}
+#lastdiv>div>div>p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+
