@@ -287,7 +287,9 @@
                         <button>Shop New Arrivals</button> -->
                         <!-- <div id="addprobas" style="display: none;"></div> -->
                     </div>   
-                    <div id="addProbas"></div>
+                    <div id="addProbas">
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -306,8 +308,9 @@
             </div>
         </div>
         
-        
+       
     </div>
+    <input type="hidden" name="" id="pricePro">
 </body>
 </html>
 <script>
@@ -345,7 +348,7 @@
                     ]
 
     // let data = [];
-    var value;
+    // let value;
     let totalPro = data.length;
     document.getElementById("countCartP").innerText=`Get It Shipped ( ${totalPro} )`;
     let addProbas = document.querySelector('#addDefault')
@@ -384,24 +387,29 @@
                         let desc = document.createElement("p");
                         desc.innerText = el.desc;
                         let select = document.createElement("select");
-                        // select.setAttribute('class','selectId')
+                        select.setAttribute('id','selectId')
                         select.innerHTML=`<option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
                                         <option value="4">4</option>
                                         <option value="5">5</option>`;
-                        select.addEventListener("change",function(){
-                            getvalueSelect(Number(event.target.value));
-                            // value = Number(event.target.value)
-                            // // console.log(typeof  value)
-                            //  console.log(value);
-                            // alert(event.target.value);
-                            // let value = document.querySelector("select").value;
-                            // alert(value);
+                                        
+                        // let e = document.getElementById("selectId");
+                        let span =document.createElement("span");
+                        span.setAttribute("id","spanid")
+                        // let urser = e.options[e.selectedIndex].text;
+                        // console.log(urser);
+                        select.addEventListener('change', function() {
+                            const index = select.text;
+                            console.log("hi")
+                            // Add that data to the <p>
+                           
+                           
+                            console.log(index);
                         })
+                    
                         let price = document.createElement("p");
-                        // console.log(value);
-                        price.innerText=` Price: ${value}`;               
+                        price.innerText="Price";             
                         let moves = document.createElement("p");
                         moves.innerHTML = `<a>Moves to Loves<a/>`
                         let remove = document.createElement("p");
@@ -420,8 +428,11 @@
         function remPro(){
             alert("Hiiiiii");
         }
-        function getvalueSelect(x){
-            value =x;
-        }
+        // let valu;
+        // function get(){
+        //     // console.log(x);
+        //     valu =x;
+        //      return valu;
+        // }
         
 </script>
