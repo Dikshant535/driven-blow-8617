@@ -83,12 +83,13 @@
             height: auto;
             display: grid;
             grid-template-columns: repeat(2,1fr);
-            grid-template-rows: 190px;
+            grid-template-rows: 220px;
             justify-content: flex-start;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
         #addProbas>div>div{
-            border: 1px solid grey;
-            height: auto;
+            border: 1px solid transparent;
+            height: auto;  
         }
        
         #addProbas>div>div>img{
@@ -96,11 +97,21 @@
             width: 100%;
             height: 100%;
         }
-        /* #imgprobas>h4,p,button,select{
+        #imgprobas>h4{
             margin-left: 10px;
             margin-right: 10px;
             margin-top: 7px; 
-        } */
+        }
+        #imgprobas>p{
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 7px; 
+        }
+        #imgprobas>select{
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 7px; 
+        }
 
         #basCont1>div>div:first-child>div:first-child>div{
             border: 1px solid transparent   ;
@@ -122,7 +133,7 @@
             width: 10%;
         }
         #basCont1>div>div:first-child>div:last-child{
-            border: 1px solid red;
+            border: 1px solid transparent;
             width: 95%;
             height: auto;
             margin: auto;
@@ -253,11 +264,11 @@
             color: white;
             margin-bottom: 50px;
         }
-        /* #basCont1>div>div:first-child>div:last-child>div:first-child>p{
+        #basCont1>div>div:first-child>div:last-child>div:first-child>p{
             text-align: center;
             font-size: 15px;
             line-height: 22px;
-        } */
+        }
     </style>
 </head>
 <body>
@@ -320,32 +331,36 @@
                             "price": 345,
                             "rating": "\u2605 \u2605 \u2605 \u2605 \u2606",
                             "desc": "4 Colors",
-                            "id": 5
-                        },
-                        {
-                            
-                            "image": "https://www.sephora.com/productimages/sku/s2407286-main-zoom.jpg?imwidth=230",
-                            "name": "Charlotte Tilbury",
-                            "title": "Mini Hollywood Flawless Filter",
-                            "price": 345,
-                            "rating": "\u2605 \u2605 \u2605 \u2605 \u2606",
-                            "desc": "4 Colors",
-                            "id": 5
-                        },
-                        {
-                            
-                            "image": "https://www.sephora.com/productimages/sku/s2407286-main-zoom.jpg?imwidth=230",
-                            "name": "Charlotte Tilbury",
-                            "title": "Mini Hollywood Flawless Filter",
-                            "price": 345,
-                            "rating": "\u2605 \u2605 \u2605 \u2605 \u2606",
-                            "desc": "4 Colors",
-                            "id": 5
+                            "id": 5,
+                            "value":1
                         }
-                    ]
+                    ]   
+                    //     {
+                            
+                    //         "image": "https://www.sephora.com/productimages/sku/s2407286-main-zoom.jpg?imwidth=230",
+                    //         "name": "Charlotte Tilbury",
+                    //         "title": "Mini Hollywood Flawless Filter",
+                    //         "price": 345,
+                    //         "rating": "\u2605 \u2605 \u2605 \u2605 \u2606",
+                    //         "desc": "4 Colors",
+                    //         "id": 5,
+                    //         "value":1
+                    //     },
+                    //     {
+                            
+                    //         "image": "https://www.sephora.com/productimages/sku/s2407286-main-zoom.jpg?imwidth=230",
+                    //         "name": "Charlotte Tilbury",
+                    //         "title": "Mini Hollywood Flawless Filter",
+                    //         "price": 345,
+                    //         "rating": "\u2605 \u2605 \u2605 \u2605 \u2606",
+                    //         "desc": "4 Colors",
+                    //         "id": 5,
+                    //         "value":1
+                    //     }
+                    // ]
 
     // let data = [];
-    var value;
+    let totalvalue=0;
     let totalPro = data.length;
     document.getElementById("countCartP").innerText=`Get It Shipped ( ${totalPro} )`;
     let addProbas = document.querySelector('#addDefault')
@@ -384,26 +399,28 @@
                         let desc = document.createElement("p");
                         desc.innerText = el.desc;
                         let select = document.createElement("select");
-                        // select.setAttribute('class','selectId')
+                        select.setAttribute('id','selectId')
                         select.innerHTML=`<option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
                                         <option value="4">4</option>
                                         <option value="5">5</option>`;
                         select.addEventListener("change",function(){
-                            getvalueSelect(Number(event.target.value));
-                            // value = Number(event.target.value)
-                            // // console.log(typeof  value)
-                            //  console.log(value);
-                            // alert(event.target.value);
-                            // let value = document.querySelector("select").value;
-                            // alert(value);
-                        })
+                            value = event.target.value;
+                            el.value=value;
+                            p=+el.value*el.price
+                            totalvalue+=p;
+                            price.innerText= `Price: ${p}`;   
+                            console.log(totalvalue)
+
+                        });
                         let price = document.createElement("p");
-                        // console.log(value);
-                        price.innerText=` Price: ${value}`;               
+                        
+                        p=+el.value*el.price;
+                        totalvalue+=p;
+                        price.innerText= `Price: ${p}`;               
                         let moves = document.createElement("p");
-                        moves.innerHTML = `<a>Moves to Loves<a/>`
+                        moves.innerHTML = `<a>Moves to Loves<a/>`;
                         let remove = document.createElement("p");
                         remove.innerText="Remove";
                         remove.addEventListener("click",function(){
@@ -416,12 +433,21 @@
                     })    
                 }
         }
-        display(data);
-        function remPro(){
-            alert("Hiiiiii");
-        }
-        function getvalueSelect(x){
-            value =x;
-        }
         
+        display(data);
+        console.log(totalvalue);
+        // function remPro(){
+        //     alert("Hiiiiii");
+        // }
+        
+
+// let allTotalSum = 0
+
+//         let totalSum = (data,value)=>{
+//             data.forEach(data=>{
+//                 allTotalSum += data.price*Number(data.value);
+//             })
+//             return allTotalSum;
+//         }
+//         console.log(totalSum(data))
 </script>
