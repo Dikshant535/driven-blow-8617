@@ -1,0 +1,101 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<style>
+    label{
+        display: flex;
+    }
+</style>
+
+<body>
+    <fieldset data-comp="FilterGroup ">
+        <div></div>
+        <button type="button">
+            <legend>
+                Volume
+            </legend>
+            <!-- <svg>
+                <path></path>
+            </svg> -->
+        </button>
+        <div id="filter_volume" style="height: 117px; overflow: initial">
+            <div>
+                <label>
+                    <input type="checkbox" />
+                    
+                    <div>Natural (4)</div>
+                </label>
+                <label>
+                    <input type="checkbox" />
+                    
+                    <div>Full (2)</div>
+                </label>
+                <label>
+                    <input type="checkbox" />
+                    
+                    <div>Dramatic (2)</div>
+                </label>
+            </div>
+        </div>
+    </fieldset>
+    <div id="cont"></div>
+</body>
+
+</html>
+<script>
+    document.querySelector(
+        "body > div:nth-child(5) > div > div > div > div.css-rk2zw2.e65zztl0 > div > div:nth-child(5) > fieldset:nth-child(25)"
+    );
+</script>
+<script>
+    let additem = JSON.parse(localStorage.getItem("additem")) || [];
+    console.log(additem);
+
+    function append(data) {
+        let cont = document.getElementById("cont");
+        cont.innerHTML = null;
+        data.forEach((el) => {
+            let img = document.createElement("img");
+            img.src = el.image;
+            let name = document.createElement("h4");
+            name.innerText = el.name;
+            let title = document.createElement("h3");
+            title.innerText = el.title;
+            let price = document.createElement("h4");
+            price.innerText = el.price;
+            let rating = document.createElement("p");
+            rating.setAttribute("class", "ret");
+            rating.innerText = el.rating;
+            let ratingStar = document.createElement("div");
+            let span1 = document.createElement("span");
+            let span2 = document.createElement("span");
+            let span3 = document.createElement("span");
+            let span4 = document.createElement("span");
+            let span5 = document.createElement("span");
+            span1.setAttribute("class", "fa fa-star checked");
+            span2.setAttribute("class", "fa fa-star checked");
+            span3.setAttribute("class", "fa fa-star checked");
+            span4.setAttribute("class", "fa fa-star");
+            span5.setAttribute("class", "fa fa-star");
+            // ratingStar.append(span1,span2,span3,span4,span5,rating);
+            ratingStar.style.display = "flex";
+            ratingStar.style.alignItems = "center";
+
+            let color = document.createElement("p");
+            color.innerText = el.desc;
+            let box = document.createElement("div");
+            //
+            box.innerHTML = null;
+            box.append(img, name, title, color, rating, price);
+
+            cont.append(box);
+        });
+    }
+
+    append(additem);
+</script>
