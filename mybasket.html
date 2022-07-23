@@ -304,12 +304,12 @@
             </div>
             <div id="basCont2">
                 <div>
-                    <p>Merchandise Subtotal</p>
+                    <p id="subtot">Merchandise Subtotal</p>
                     <p>Estimated Tax & Other Fees</p>
                 </div>
                 <hr>
                 <div>
-                    <h3>Estimated Total</h3>
+                    <h3 id="esTot">Estimated Total</h3>
                     <p>Shipping & taxes calculated during checkout</p>
                     <button>Checkout Shipped Items</button>
                     <button>Pay With <img src="data:image/png;base64,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" alt=""></button>
@@ -322,46 +322,9 @@
 </body>
 </html>
 <script>
-         let data =[
-                        {
-                            
-                            "image": "https://www.sephora.com/productimages/sku/s2407286-main-zoom.jpg?imwidth=230",
-                            "name": "Charlotte Tilbury",
-                            "title": "Mini Hollywood Flawless Filter",
-                            "price": 345,
-                            "rating": "\u2605 \u2605 \u2605 \u2605 \u2606",
-                            "desc": "4 Colors",
-                            "id": 5,
-                            "value":1
-                        }
-                    ]   
-                    //     {
-                            
-                    //         "image": "https://www.sephora.com/productimages/sku/s2407286-main-zoom.jpg?imwidth=230",
-                    //         "name": "Charlotte Tilbury",
-                    //         "title": "Mini Hollywood Flawless Filter",
-                    //         "price": 345,
-                    //         "rating": "\u2605 \u2605 \u2605 \u2605 \u2606",
-                    //         "desc": "4 Colors",
-                    //         "id": 5,
-                    //         "value":1
-                    //     },
-                    //     {
-                            
-                    //         "image": "https://www.sephora.com/productimages/sku/s2407286-main-zoom.jpg?imwidth=230",
-                    //         "name": "Charlotte Tilbury",
-                    //         "title": "Mini Hollywood Flawless Filter",
-                    //         "price": 345,
-                    //         "rating": "\u2605 \u2605 \u2605 \u2605 \u2606",
-                    //         "desc": "4 Colors",
-                    //         "id": 5,
-                    //         "value":1
-                    //     }
-                    // ]
-
-    // let data = [];
+    let mydata = JSON.parse(localStorage.getItem("basketdata"))||[];                      
     let totalvalue=0;
-    let totalPro = data.length;
+    let totalPro = mydata.length;
     document.getElementById("countCartP").innerText=`Get It Shipped ( ${totalPro} )`;
     let addProbas = document.querySelector('#addDefault')
         let display = (arr) =>{
@@ -376,7 +339,6 @@
                     addProbas.append(h3,btn)
                 }else{
                     addProbas.style.display="none";
-                    console.log("HIIIIII")
                     let cont = document.getElementById('addProbas')
                     cont.innerHTML="";
 
@@ -406,13 +368,23 @@
                                         <option value="4">4</option>
                                         <option value="5">5</option>`;
                         select.addEventListener("change",function(){
+                            totalvalue=0;
                             value = event.target.value;
                             el.value=value;
                             p=+el.value*el.price
-                            totalvalue+=p;
                             price.innerText= `Price: ${p}`;   
-                            console.log(totalvalue)
-
+                            mydata[index]=el;
+                            localStorage.setItem("basketdata",JSON.stringify(mydata));
+                            mydata = JSON.parse(localStorage.getItem("basketdata"));
+                            console.log(mydata);
+                            mydata.forEach((el)=>{
+                                totalvalue+= (el.price*Number(el.value));
+                            })
+                            localStorage.setItem("totalvalue",JSON.stringify(totalvalue));
+                            totalsum=JSON.parse(localStorage.getItem("totalvalue"));
+                            console.log(totalsum);
+                            document.getElementById("subtot").innerText=`Merchandise Subtotal        =>(${totalsum})`;
+                             document.getElementById("esTot").innerText=`Merchandise Subtotal         =>(${totalsum}) `;
                         });
                         let price = document.createElement("p");
                         
@@ -424,7 +396,7 @@
                         let remove = document.createElement("p");
                         remove.innerText="Remove";
                         remove.addEventListener("click",function(){
-                            alert(index);
+                            remPro(index);
                         })
 
                         div1.append(name,title,rating,desc,select,price,moves,remove);
@@ -433,21 +405,17 @@
                     })    
                 }
         }
-        
-        display(data);
-        console.log(totalvalue);
-        // function remPro(){
-        //     alert("Hiiiiii");
-        // }
-        
+        display(mydata);
+        localStorage.setItem("totalvalue",JSON.stringify(totalvalue));
+        totalsum=JSON.parse(localStorage.getItem("totalvalue"));
+        console.log(totalsum);
+        document.getElementById("subtot").innerText=`Merchandise Subtotal        =>(${totalsum})`;
+        document.getElementById("esTot").innerText=`Merchandise Subtotal         =>(${totalsum}) `;
+        function remPro(index){
+            alert(index);
+            mydata.splice(index,1);
+            localStorage.setItem("basketdata",JSON.stringify(mydata)) ; 
+            window.location.reload();
+        }
 
-// let allTotalSum = 0
-
-//         let totalSum = (data,value)=>{
-//             data.forEach(data=>{
-//                 allTotalSum += data.price*Number(data.value);
-//             })
-//             return allTotalSum;
-//         }
-//         console.log(totalSum(data))
 </script>
