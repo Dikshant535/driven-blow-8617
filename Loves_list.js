@@ -4,7 +4,7 @@ let obj = {
     product_name: "AARS", // has to be bold
     useTo: "Blush", // simple p tag
     size: "Size 0.16 oz/ 4.8 g",
-    item: "Item 229986",
+    item: "1", // Item 229986
     color: "Color: Orgasm X - shimmering deep coral with gold pearl",
     price: 322,
 
@@ -14,7 +14,7 @@ let obj2 = {
     product_name: "ZARS", // has to be bold
     useTo: "Blush", // simple p tag
     size: "Size 0.16 oz/ 4.8 g",
-    item: "Item 296986",
+    item: "2",
     color: "Color: Orgasm X - shimmering deep coral with gold pearl",
     price: 42,
 
@@ -24,7 +24,7 @@ let obj3 = {
     product_name: "foundation", // has to be bold
     useTo: "Blush", // simple p tag
     size: "Size 0.16 oz/ 4.8 g",
-    item: "Item 229696",
+    item: "3",
     color: "Color: Orgasm X - shimmering deep coral with gold pearl",
     price: 12,
 
@@ -90,8 +90,6 @@ function lovedonce(data) {
     topbox.append(sharediv, sortdiv)
     document.querySelector("#lovedOnce").append(topbox);
 
-
-
     for (let i = 0; i < data.length; i++) {
         let box = document.createElement("div");
         box.setAttribute("class", "productInsideLoves");
@@ -133,14 +131,26 @@ function lovedonce(data) {
     }
 }
 
+
 let temp = [];
 for (let i = arr.length - 1; i >= 0; i--) {
     temp.push(arr[i]);
 }
-lovedonce(temp);
-function removepro(x) {
-    console.log(x);
+function removepro(x){
+    let ans = [];
+    for (let i = 0; i<temp.length; i++) {
+        if(temp[i].item != x.item){
+            // console.log(temp[i]);
+            ans.push(temp[i]);
+        }
+        temp = ans;
+    }
+    lovedonce(temp);
+    // console.log(ans);
 }
+
+lovedonce(temp);
+
 
 let sortit = () => {
     let x = document.querySelector("#sortingMethod").value;
@@ -158,7 +168,7 @@ let sortit = () => {
         lovedonce(arr);
     } else if (x == "lth") {
         arr.sort((a, b) => {
-            return a.price - b.price;
+            return a.price - b.price;  
         });
         lovedonce(arr);
     }
@@ -182,6 +192,7 @@ function inputshare(){
 }
 let popup = () => {
     let div = document.querySelector("#sharepopup");
+    div.innerHTML = "";
     let header = document.createElement("div");
     header.innerHTML = headersharepopup();
 
