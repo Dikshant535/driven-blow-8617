@@ -1,120 +1,224 @@
-/* *{
-    background-color: black;
- } */
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
 
- 
  #container {
-      display: grid;
-      gap: 20px;
-      /* border: 1px solid red; */
+     display: grid;
+     gap: 5px;
+     padding: 0px 0px 50px 0px;
+     background-color: white;
+} 
+ 
+#box1{
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: repeat(1, auto);
+   gap: 10px;
+   padding : 10px 0px 10px 30px; 
+   border: 1px solid white;
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;;
+  } 
+
+#imageda{
+  width:90%;
+  margin: auto;
+  border: 1px solid whitesmoke;
+}
+
+ #detailda{
+  display: grid;
+  gap: 7px;
+  padding: 5px;
+  margin:auto ;
+  border: 1px solid white;
+  padding : 10px;
+  width:95%;
+}
+
+ #detailda > div{
+   border: 1px solid whitesmoke;
+   padding : 10px;
  } 
-
- #box1{
-      display: grid;
-     grid-template-columns: repeat(2, 1fr);
-     grid-template-rows: repeat(1, auto);
-     gap: 10px;
-     width: 95%;
-     /* height: 700px; */
-     border: 1px solid whitesmoke;
-     border-radius: 5px;
-     margin: auto;
-   } 
-
- #box1 > div:nth-child(1){
-      width:95%;
-      /* border: 1px solid green; */
-     margin: auto;
-     display: block;
-  }
-
-  #box1 > div:nth-child(2){
-    width:95%;
-    /* border: 1px solid yellow; */
-  } 
-
-  #second > div {
-     /* height:20px; */
-     margin-top: 10px ;
-     /* border: 1px solid blueviolet; */
-  }
-
-   #box2{
-    border: 1px solid black;
-    height: 150px;
-    width: 95%;
-    margin: auto;
-   } 
-
-   #box3{
-    border: 1px solid black;
-    height: 150px;
-    width: 95%;
-    margin: auto;
-  } 
-
-
-  h2{
-    color: red;
-   }
-
-   h3{
-     color: gray;
-     font: bold;
-    }
-
-  img{
-     justify-content: flex-start;
-     width: 99%;
-     height: 90%;
-  }
  
-    button{
-     justify-content: end;
-     color: black;
-   }
-  
+ h5{
+  color: gray;
+ }
 
+ /* ************************* */
+ #shipped{
+  background-color:whitesmoke;
+  border-radius: 1px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+ }
+#shipped  > div {
+   width: 98% ;
+   margin: auto ;
+   display: flex ;
+   flex-wrap: wrap ;
+   justify-content: space-between;
+   padding : 5px 0px 5px 0px;
+}
+
+.ship  {
+  width: 98% ;
+  margin: auto ;
+  display: flex ;
+  flex-wrap: wrap ;
+  justify-content: space-between;
+  /* border: 1px solid gray; */
+}
+/* .pick{
+  display: flex ;
+  flex-wrap: wrap ;
+  margin: 15px ;
+ padding: 1% ;
+  align-content: space-between ;
+  display: inline;
+} */
+
+
+#picked{
+  background-color:whitesmoke;
+  border-radius: 1px;
+ }
+
+#picked  > div {
+  width: 98% ;
+  margin: auto ;
+  display: flex ;
+  flex-wrap: wrap ;
+  justify-content: space-between;
+  padding : 5px 0px 5px 0px;
+}
+
+.pick{
+  width: 98% ;
+  margin: auto ;
+  display: flex ;
+  flex-wrap: wrap ;
+  justify-content: space-between;
+
+}
+
+ #basket{
+   display: flex ;
+   gap: 5px;
+   padding: 5px;
+ }
+
+
+   #buttoncart{
+     color: white;
+     background-color: red;
+     border:1px solid white ;
+     padding: 12px;
+     border-radius: 10px;
+ }
+ .buttonwish{
+   padding: 10px;
+   color: red;
+   background-color: antiquewhite;
+   border:1px solid white ;
+   border-radius: 10px;
+ }
+
+
+
+/* *************** */
+
+
+
+
+#box1 > #imageda > img{
+   justify-content: flex-start;
+   width: 99%;
+   height: 98%;
+}
+
+/* **************** */
+ .high  {
+  width: 95% ;
+  margin: auto ;
+  display: flex ;
+  flex-wrap: wrap ;
+  justify-content: space-between;
+  /* border: 1px solid gray; */
  
-   #highlights {
-    margin-top: 25px;
+ }
+  #highlights {
+   
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 30px;
-    grid-gap: 20px;
-    border: 1px solid gray;
-    border-radius: 10px;
+     padding: 15px;
+     grid-gap: 5px;
+     width: 80%;
+     margin: auto;
+     /* border: 1px solid gray; */
+     border-radius: 10px;
   }
 
   #highlights > .courses {
     display: flex;
+    border-radius: 10px;
     align-items: center;
-    width: auto;
-    justify-content: center;
-    text-align: center;
-    padding: 5px;
-    border: 1px solid rgba(128, 128, 128, 0.212);
-     border-radius: 10px;
-     margin: 5px 10px 5px 0px ;
+    gap: 5px;
+    /* justify-content: left; */
+    /* border: 1px solid gray; */
   }
+
+  .courses img {
+    justify-content: flex-start;
+    width: 22%;
+    height: 60%;
+    border-radius: 80px;
+  }
+
+
+
+/* ******************************* */
+
+.about  {
+  width: 95% ;
+  margin: auto ;
+  display: flex ;
+  flex-wrap: wrap ;
+  justify-content: space-between;
+  /* border: 1px solid gray; */
  
-  img{
-   width:100%;
-   height: 90%;
  }
 
-   .ProductTypeTittle{
-      width: 80%;
-      margin-top: 20px ;
-     }
-
-   .ProductTypeTittle > div{
-     align-items: center;
+ .ProductTypeTittle{
+    width: 75%;
+    margin-top: 20px ;
+    margin: auto;
    }
 
+ .ProductTypeTittle > div{
+   align-items: center;
+ }
 
+ /* ****** */
+#myBtn{
+  background-color: aliceblue;
+  border:1px solid gray;
+  padding:5px;
+}
 
-
-
-
+.ingred  {
+  width: 95% ;
+  margin: auto ;
+  display: flex ;
+  flex-wrap: wrap ;
+  justify-content: space-between;
+  /* border: 1px solid gray; */
  
+ }
+
+
+
+ body {font-family: Arial, Helvetica, sans-serif;}
+ * {box-sizing: border-box;}
+ 
+ /* Button used to open the contact form - fixed at the bottom of the page */
