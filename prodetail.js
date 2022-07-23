@@ -8,7 +8,7 @@
         "title": "Mini Hollywood Flawless Filter",
         "price": 345,
         "rating": "\u2605 \u2605 \u2605 \u2605 \u2606 12k",
-        "desc": "4 Colors",
+        "desc": "4 Colors available",
         "id": 5,
          reward:"*4 payments of $7.50 with Klarna or afterpay",
          color:" Gloss™ Wicked Gloss™ Faux Real - coral pearlescent sheen",
@@ -23,8 +23,10 @@
       let detailda = document.getElementById("detailda");
 
       let  detailed = document.getElementById("detailed")
+
       let  shipped = document.getElementById("shipped");
       let  picked = document.getElementById("picked");
+
       let  basket = document.getElementById("basket");
      
      //  ***** 
@@ -48,12 +50,12 @@
      let Data_color=document.createElement("p");
      Data_color.innerText= "Color : "+ elem.color;
 
-      
+      // *************
      let cartbutton=document.createElement("button");
      cartbutton.setAttribute("id", "buttoncart")
-    cartbutton.innerText="Add to Basket for Standard Shipping";
+    cartbutton.innerText="Add to CART for Shipping";
   
-    let wishbutton=document.querySelector(".open-button");
+    let wishbutton=document.createElement("button");
      wishbutton.setAttribute("class", "buttonwish")
      wishbutton.innerText="\u2764";
   
@@ -70,29 +72,29 @@
    
      cartbutton.addEventListener("click",function(){
         Addtocart(elem)
+    
      })
 
       wishbutton.addEventListener("click",function(){
        Addtowish(elem)
      })
 
-       let cartData = JSON.parse(localStorage.getItem("cart")) || [];
-       let wishData = JSON.parse(localStorage.getItem("wish")) || [];
+       let cartData = JSON.parse(localStorage.getItem("cartsephora")) || [];   
+       let wishData = JSON.parse(localStorage.getItem("wishsephora")) || [];
 
      function Addtocart(elem){
        
-     localStorage.setItem("cart",JSON.stringify(cartData));
      cartData.push(elem);
-     
-     
      alert("Product added to Cart");
+     localStorage.setItem("cartsephora",JSON.stringify(cartData));
      console.log(cartData);
     }
     
      function Addtowish(elem){
-     localStorage.setItem("wish",JSON.stringify(wishData));
+     
      wishData.push(elem);
      alert("Product added to Wishlist");
+     localStorage.setItem("wishsephora",JSON.stringify(wishData));
      console.log(wishData);
     }
 
@@ -115,13 +117,3 @@ function myFunction() {
        moreText.style.display = "inline";
    }
 }
-
-
-function openForm() {
- document.getElementById("myForm").style.display = "block";
-}
-
-function closeForm() {
- document.getElementById("myForm").style.display = "none";
-}
-

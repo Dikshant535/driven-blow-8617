@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sephora Dummy</title>
     <link rel="stylesheet" href="prodetail.css">
+    
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
    
 </head>
 
 <body>
 
- 
+  <div id="header"> </div>
 
      <div id="container"> 
 
@@ -56,23 +59,21 @@
                     <p style='display:inline'>
                         Select to see availability at</p></h4>
                     <h5 style='display:inline'>Stores near you </h5>
-                    <p style='display:inline'> &#xf54f;</p>            
-                                 </div>        
+                 
+                    <button  style='display:inline' onclick="openForm()" >  &#xf54f;</button>    
+                         
+                           </div>        
                   </div>  
               </div>
 
            <div  id="basket"> 
                <!-- <button  class="open-button" >Add to basket for Standard  shipping</button> -->
                <!-- <a href="popup.html"> <button>Check Out</button></a> -->
-               <button  class="open-button" onclick="openForm()" ></button> 
-           <!-- <div> <a href="#buttoncart"> <button  class="open-button" onclick="openForm()">Add to basket for Standard  shipping</button>  </a></div> -->
+               <!-- <div> <a href="#buttoncart"> <button  class="open-button" onclick="openForm()">Add to basket for Standard  shipping</button>  </a></div> -->
             
-      
-
-          </div>
-
-
-       </div> 
+         </div>
+ 
+      </div> 
                
      </div>
      
@@ -127,75 +128,31 @@
           <div>   
             <h4>What it is:</h4>
             <p> A set that includes the all-natural shampoo and conditioner bars and 2 sustainable bamboo holders.  </p>
-            <h4>Type: </h4>
-             <p> Straight, Wavy, Curly, and Coily</p>
+           
             <h4> Concerns: </h4>
-            <p>The #1 Luxury  Skincare Brand.Your skin,  
-              your body and your wellness lie at the heart.
-              of ELEMIS.<span id="dots">...
-              Silk Balm Icy is infused with fenugreek extract plus cryo-cooling agents, combined with
-              the same smoothing and hydrating hyaluronic filling spheres you know and love from HUDA BEAUTYs
-              original Silk Balm. Together, the ingredients deliver a mirror-like shine with an icy,
-              feel-good tingling sensation that doesnt burn or sting while making your lips look and feel so
-              juicy. The super moisturizing formula is lightweight, non-sticky, and has a raspberry-mint scent.
-              Your skin, your body and your wellness lie at the heart.
-               </span><span id="more"> </p>
+            <p> Pores, Dullness, and Uneven Texture  </p> <span id="dots">
+              <h4>Type: </h4>
+                <p> Straight, Wavy, Curly, and Coily</p>
+                <h4> Ingredient Callouts:</h4>
+                <p> This product is vegan, gluten-free, cruelty-free, and comes in recyclable packaging.</p>
+                <h4>What Else You Need to Know:</h4>
+                <p> This potent 10% Niacinamide Night Mask is clinically tested to visibly even skin tone and 
+                  refine pores while replenishing and supporting the skins moisture barrier. With three percent panthenol and up-cycled blueberry seed oil, this silky, cushion-like formula restores hydration,
+                   balances oil, and revives the appearance of dull skin.
+                    Transform skin overnight for a smooth, even complexion..
+                   Your skin, your body and your wellness lie at the heart.</p>
+               </span><span id="more">   
              </div>
           
               <button onclick="myFunction()" id="myBtn">Read less</button>
-           </div>
-
-           <div #confirm> 
-                 
-                  <div class="confirmview"> 
-                           <div class="confirmimage"> </div>
-                           <div class="confirmdetail"> </div>
-                           <div class="confirmcheckout"> 
-                                 <div> </div>
-                                 <div> </div>
-                           </div>
-                  </div>
                </div>
          
       </div>
 
-    <!-- ******************** -->
-          
-       <div class="ingred"> 
-          <div>  <h2 style='display:inline'>Ingredients </h2></div>  
-          <div> &#128779; </div>
-     </div>
-
-           
-     
-
-          <!-- *************************** -->
-            
-  <div class="form-popup" id="myForm">
-
-    <!-- <div class="overlay">   </div> -->
-     <div class="content"> 
-      <div class="signed"> 
-             <h3>Sign in to Sephora</h3>  
-             <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-       </div>
-        <div><input id="email" type="text" placeholder="Email Address" required> </div>
-        <div><input id="password" type="password" placeholder="Password" required> </div>
-       <div class=" signed">
-             <h4> Keep me signed</h4>
-             <h5> Forgetten password ? </h5>  
-      </div>
-           <button type="submit" id="btn">SignUp</button>
-           <div id="newto"><h3> New to Sephora</h3> </div>
-           <button type="submit" id="btn"> <h4> Create Account</h4> </button>
-      </div>
-</div>
-     
-
-
-   
-
  </div>
+      <!-- *********footer***** -->
+   <div id="footer">  </div>
+
 </body>
 </html>
 

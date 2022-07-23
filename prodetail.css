@@ -6,7 +6,7 @@
 
  #container {
      display: grid;
-     gap: 20px;
+     gap: 5px;
      padding: 0px 0px 50px 0px;
      background-color: white;
 } 
@@ -17,7 +17,7 @@
    grid-template-rows: repeat(1, auto);
    gap: 10px;
    padding : 10px 0px 10px 30px; 
-   border: 1px solid gray;
+   border: 1px solid white;
    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;;
   } 
 
@@ -32,7 +32,7 @@
   gap: 7px;
   padding: 5px;
   margin:auto ;
-  border: 1px solid gray;
+  border: 1px solid white;
   padding : 10px;
   width:95%;
 }
@@ -218,77 +218,7 @@
 
 
 
- /* body {font-family: Arial, Helvetica, sans-serif;}
- * {box-sizing: border-box;} */
+ body {font-family: Arial, Helvetica, sans-serif;}
+ * {box-sizing: border-box;}
  
  /* Button used to open the contact form - fixed at the bottom of the page */
- .form-popup{
-
-   width: 33%;
-   margin: auto;
-  margin-top: 50px;
-  border: 1px solid whitesmoke;
-  justify-content: center;
-} 
-
-#email,#password{
-  margin: 20px;
-  width: 300px;
-  height: 40px;
-  padding-left: 10px;
-  font-size: 15px;
-  border-radius: 3px;
-  
-}
-.signed{
-display:flex;
-justify-content: space-between;
- gap :20%;
- margin: 15px;
-} 
-
-.content{
-  height: auto;
-  padding:5px ;
-  border: 1px solid gray;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
-}
-/* .content button{  
-   width:auto;
-   padding:5px;
-} */
-#btn{
-  width:35%;
-  padding:5px;
- margin-left: 15px;
-}
-
-#newto{
-  padding:10px;
-}
-.form-popup .overlay{
-   position:fixed;
-   top:0px;
-   left:0px;
-   width:100vw;
-   height:100vh;
-
-}
-
-.form-popup .content{
-  position: fixed;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
-  background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  border-radius: 8px;
-}
-.content h3{
-  padding-left: 15px;
-}
-input{
-  border: 1px solid gray;
-}
-
-
