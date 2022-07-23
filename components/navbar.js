@@ -15,29 +15,35 @@ let navbar = ()=>{
         </div>
         <div id="signin">
             <img width="30px" src="https://www.sephora.com/img/ufe/icons/me-active.svg" alt="">
-            <a>Sign In</a>
+            <a style="text-decoration:none;color:black;" href="login.html">Sign In</a>
         </div>
         
         <div id="bag_div">
-        <div></div>
-        <div></div>
-        <div></div>
+        <div class="images">
+        <img src="./img/chat.jpg">
+        </div>
+        <div class ="images">
+        <img id="fab" src="./img/heart.svg">
+        </div>
+        <div class="images">
+        <img id="bag" src="./img/bag.jpg">
+        </div>
         </div>
     </div>
     <div id="menubar">
         <div id="below_inputbar">
-            <p>New</p>
-            <p>Brands</p>
-            <p>Makeup</p>
-            <p>Skincare</p>
-            <p>Hair</p>
-            <p>Fragrance</p>
-            <p>Tools & Brushes</p>
-            <p>Bath & Body</p>
-            <p>Mini size</p>
-            <p>Gifts</p>
-            <p>Beauty Under $20</p>
-            <p> Sale & Offers</p>
+            <p id="new">New</p>
+            <p id="brand">Brands</p>
+            <p id="makeup">Makeup</p>
+            <p id="hair">Hair</p>
+            <p id="skincare" >Skincare</p>
+            <p id="frag">Fragrance</p>
+            <p id="tool">Tools & Brushes</p>
+            <p id="size">Mini size</p>
+            <p id="bath">Bath & Body</p>
+            <p id="gift">Gifts</p>
+            <p id="under">Beauty Under $20</p>
+            <p id="sale"> Sale & Offers</p>
            </div>
     </div>
         

@@ -20,9 +20,13 @@
 #bag_div{
     display: flex;
     justify-content:space-around;
-    border: 1px solid green;
     align-items: center;
     width:10%;
+}
+.images>img{
+   width:25px;
+   cursor: pointer;
+
 }
 #logo>img{
     width:150px;
