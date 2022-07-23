@@ -1,0 +1,150 @@
+#below_nav{
+    display: flex;
+    margin: auto;
+    margin-top: 10px;
+    overflow-x:scroll;
+    gap: 10px;
+}
+#below_nav::-webkit-scrollbar{
+    display: none;
+    
+}
+#below_nav>div>img{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px ;
+    cursor: pointer;
+}
+.tt1,.tt2,.tt3,.tt4{
+    margin-top: -25px;
+    background-color: rgb(84, 179, 216);
+    padding: 10px  0px  0px 20px;
+    border-bottom-left-radius:5px ;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+.tt2{
+    background-color: palevioletred;
+
+}
+.tt3{
+    background-color: rgb(21, 168, 168);
+}
+.tt4{
+   
+    background-color: rgb(212, 145, 167);
+
+}
+.tt1>p,.tt2>p,.tt3>p,.tt4>p{
+    margin-top: -18px;
+    font-size: 18px;
+    color: black;
+}
+.tt1>h2,.tt3>h2{
+   color: white;
+}
+.tt1>p,.tt3>p{
+    color: white;
+ }
+ .tt1>h4,.tt3>h4{
+    color: white;
+ }
+.tt1>p:hover,.tt2>p:hover,.tt3>p:hover,.tt4>p:hover,h4:hover{
+     text-decoration: underline;
+}
+
+#justDropped{
+    width: 85%;
+    margin: auto;
+}
+#below_justDropped::-webkit-scrollbar{
+    display: none;
+}
+#below_justDropped{
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+    padding: 8px;
+}
+
+.boxes1{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 5px;
+}
+.boxes1:hover{
+    margin-top: -5px;
+    cursor: pointer;
+}
+.boxes1>img{
+    border-radius: 5px;
+}
+.boxes1>p{
+    color: black;
+    margin-top: -20px;
+    margin-left: 10px;
+}
+.boxes1>h5{
+    margin-left: 10px;
+}
+#chosenforyou{
+    width:85%;
+    margin: auto;
+    margin-top: 25px;
+}
+#below_chosen::-webkit-scrollbar{
+    display: none;
+}
+#below_chosen{
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+    padding: 8px;
+}
+#makeuptips{
+    display: flex;
+    width: 85%;
+    margin: auto;
+    gap: 25px;
+    margin-top: 50px;
+}
+.maketip{
+    background-color: rgb(84, 179, 216);
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.maketip>p{
+    color: black;
+    font-size: 15px;
+    margin-top: -15px;
+}
+.maketip>p:hover,.maketip>h4:hover{
+    text-decoration: underline;
+}
+
+#topSell{
+    width: 85%;
+    margin: auto;
+    margin-top: 50px;
+}
+#below_sell{
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+    padding: 8px;
+}
+#below_sell::-webkit-scrollbar{
+    display: none;
+}
+#tips{
+    display: flex;
+    width: 85%;
+    margin: auto;
+    gap: 25px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+#tips>.maketip{
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
