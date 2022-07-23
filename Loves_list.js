@@ -4,9 +4,9 @@ let obj = {
     product_name: "AARS", // has to be bold
     useTo: "Blush", // simple p tag
     size: "Size 0.16 oz/ 4.8 g",
-    item: "Item 2296986",
+    item: "Item 229986",
     color: "Color: Orgasm X - shimmering deep coral with gold pearl",
-    price: "$32.00",
+    price: 322,
 
 }
 let obj2 = {
@@ -14,15 +14,26 @@ let obj2 = {
     product_name: "ZARS", // has to be bold
     useTo: "Blush", // simple p tag
     size: "Size 0.16 oz/ 4.8 g",
-    item: "Item 2296986",
+    item: "Item 296986",
     color: "Color: Orgasm X - shimmering deep coral with gold pearl",
-    price: "$32.00",
+    price: 42,
+
+}
+let obj3 = {
+    img: "https://www.sephora.com/productimages/sku/s2296986-main-zoom.jpg?imwidth:612",
+    product_name: "foundation", // has to be bold
+    useTo: "Blush", // simple p tag
+    size: "Size 0.16 oz/ 4.8 g",
+    item: "Item 229696",
+    color: "Color: Orgasm X - shimmering deep coral with gold pearl",
+    price: 12,
 
 }
 
 let arr = [];
-arr.push(obj2);
 arr.push(obj);
+arr.push(obj2);
+arr.push(obj3);
 
 function heart() {
     return `
@@ -60,6 +71,9 @@ function lovedonce(data) {
     topbox.setAttribute("class", "topboxloves")
 
     let sharediv = document.createElement("div");
+    sharediv.addEventListener("click", () => {
+        popup();
+    })
 
     let share = document.createElement("p");
     let imgshare = document.createElement("img");
@@ -72,7 +86,7 @@ function lovedonce(data) {
     sorttext.innerText = "Sort by: ";
     sortdiv.append(sorttext);
     selectsort.innerHTML = sorting();
-    sortdiv.append(sorttext,selectsort);
+    sortdiv.append(sorttext, selectsort);
     topbox.append(sharediv, sortdiv)
     document.querySelector("#lovedOnce").append(topbox);
 
@@ -102,7 +116,7 @@ function lovedonce(data) {
         let box3 = document.createElement("div");
 
         let price = document.createElement("p");
-        price.innerText = data[i].price;
+        price.innerText = "$ " + data[i].price;
         box3.append(price);
         let button = document.createElement("button");
         button.innerText = "Add to Basket";
@@ -118,33 +132,71 @@ function lovedonce(data) {
 
     }
 }
-lovedonce(arr);
-// function removepro(x){
-//     console.log(x);
-// }
 
-// function compare( a, b ) {
-//     if ( a.product_name < b.product_name ){
-//       return -1;
-//     }
-//     if ( a.product_name > b.product_name ){
-//       return 1;
-//     }
-//     return 0;
-// }
-// function comparerev( a, b ) {
-//     if ( a.product_name < b.product_name ){
-//       return 1;
-//     }
-//     if ( a.product_name > b.product_name ){
-//       return -1;
-//     }
-//     return 0;
-// }
+let temp = [];
+for (let i = arr.length - 1; i >= 0; i--) {
+    temp.push(arr[i]);
+}
+lovedonce(temp);
+function removepro(x) {
+    console.log(x);
+}
+
 let sortit = () => {
     let x = document.querySelector("#sortingMethod").value;
     if (x == "atoz") {
-        arr.sort((a,b) => a.product_name.localeCompare(b.product_name));
+        arr.sort((a, b) => a.product_name.localeCompare(b.product_name));
         lovedonce(arr);
-    }//else if(x == )
+    } else if (x == "ztoa") {
+        arr.sort((a, b) => b.product_name.localeCompare(a.product_name));
+        lovedonce(arr);
+    } else if (x == "htl") {
+        arr.sort((a, b) => {
+            return b.price - a.price;
+        })
+        console.log(arr);
+        lovedonce(arr);
+    } else if (x == "lth") {
+        arr.sort((a, b) => {
+            return a.price - b.price;
+        });
+        lovedonce(arr);
+    }
+}
+
+function headersharepopup() {
+    return `
+    <div id="headerofSharepoup">
+        <h2>Share your loves</h2>
+        <button onclick="remove_share_popup()"><i class="fa fa-close" id="close"></i></button>
+    </div>`;
+}
+
+function inputshare(){
+    return `
+    <div id="linktosharebox" >
+        <p>Copy the following link and share it with friends:</p>
+        <input type="text" id="linktoshare" value="http://127.0.0.1:5500/Loves_list.html">
+        <button onclick="copyTokeyboard()">Copy</button>
+    </div>`;
+}
+let popup = () => {
+    let div = document.querySelector("#sharepopup");
+    let header = document.createElement("div");
+    header.innerHTML = headersharepopup();
+
+    let div2 = document.createElement("div");
+    div2.innerHTML = inputshare();
+    div.append(header,div2);
+}
+
+let copyTokeyboard = () => {
+    let copyText = document.querySelector("#linktoshare");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copyText.value);
+}
+
+let remove_share_popup = () => {
+    document.querySelector("#sharepopup").innerHTML = "";
 }
