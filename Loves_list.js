@@ -133,10 +133,10 @@ lovedonce(temp);
 let sortit = () => {
     let x = document.querySelector("#sortingMethod").value;
     if (x == "atoz") {
-        arr.sort((a, b) => a.product_name.localeCompare(b.product_name));
+        arr.sort((a, b) => a.name.localeCompare(b.name));
         lovedonce(arr);
     } else if (x == "ztoa") {
-        arr.sort((a, b) => b.product_name.localeCompare(a.product_name));
+        arr.sort((a, b) => b.name.localeCompare(a.name));
         lovedonce(arr);
     } else if (x == "htl") {
         arr.sort((a, b) => {
