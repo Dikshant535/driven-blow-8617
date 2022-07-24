@@ -1,0 +1,177 @@
+#main{
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+#cont{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 35px;
+    margin: auto;
+   
+}
+#cont1{
+    width: 25%;
+    
+}
+#color{
+    color: black;
+}
+#cont>div{
+    
+    margin-top: 0px;
+    margin-bottom: -5px;
+    width: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+    font:inherit;
+}
+#cont>div:hover{
+    color: gray;
+    font: inherit;
+    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+#cont>div>h4{
+    margin: 2px 0px -10px 0px;
+    padding: -0px;
+    
+    
+  }
+  #cont>div>h3{
+      margin: 2px 0px -10px 0px;
+      padding: -0px;
+      color: red;
+      
+    }
+    #cont>div>h2{
+      margin: -20px 0px -5px 0px;
+      padding: -0px;
+     
+      
+    }
+    #cont>div>h5{
+      margin: 10px 0px -1px 0px;
+      padding: -0px;
+     
+      
+    }
+
+#cont>div>img{
+    width: 250px;
+    margin: auto;
+    display: block;
+}
+.img1{
+    text-align: end;
+    font-size: 45px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+#rat{
+   font-size: 20px;
+   border: none;
+   padding: 20px;
+}option{
+    font-size: 15px;
+    
+}
+.gol{
+    width: 10px;
+    border-radius: 50%;
+    border: 2px solid;
+}
+label{
+    width: 10PX ;
+    height: 10PX ;
+}
+#bt{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+#bt>div{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin:10px 15px;
+    justify-content: space-around;
+    width: 70%;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 5px;
+}
+#fod{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+#fod>div{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin:10px 15px;
+    justify-content: space-around;
+    width: 70%;
+    padding: 20px;
+    border-radius: 5px;
+    
+}
+#ig{
+    
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+#ig>div>img{
+    width: 100%;
+}
+
+@media all and (min-width: 501px) and (max-width: 751px){
+    #cont{
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows:auto;
+        width: 70%;
+    }
+}
+@media all and (min-width: 100px) and (max-width: 500px){
+    #cont{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        width: 70%;
+    }
+}
+
+#low{
+    margin: 20px;
+   
+    padding: 10px 30px;
+    border: 2px solid red;
+    background-color: green;
+    color: aliceblue;
+}
+#high{
+    margin: 20px;
+   
+    padding: 10px 30px;
+    border: 2px solid red;
+    background-color: green;
+    color: aliceblue;
+}
+.fie{
+    border: none;
+}
+label{
+   display: flex;
+   margin-bottom: 40px;
+   width: 100%;
+}
+.h2{
+    border: none;
+    text-decoration: none;
+}
+
+#color p{
+ color: black;
+ font-size: 20px;
+}
