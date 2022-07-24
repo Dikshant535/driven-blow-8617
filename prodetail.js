@@ -14,10 +14,12 @@
          color:" Gloss™ Wicked Gloss™ Faux Real - coral pearlescent sheen",
       }
  ]
-
+    //  let proDetails=JSON.parse(localStorage.getItem("additem")) || []
     proDetails.map(function (elem){
 
 
+      // let baske=document.getElementById("#detailda");
+      // baske.innerHTML=null;
 
       let imageda = document.getElementById("imageda");
       let detailda = document.getElementById("detailda");
@@ -28,6 +30,7 @@
       let  picked = document.getElementById("picked");
 
       let  basket = document.getElementById("basket");
+      basket.innerText=null;
      
      //  ***** 
 
