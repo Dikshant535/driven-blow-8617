@@ -106,9 +106,8 @@ let mydata = JSON.parse(localStorage.getItem("addtocart"))||[];
         document.getElementById("subtot").innerText=`Merchandise Subtotal        =>(${totalsum})`;
         document.getElementById("esTot").innerText=`Estimated Total        =>(${totalsum}) `;
         function remPro(index){
-            alert(index);
             mydata.splice(index,1);
-            localStorage.setItem("basketdata",JSON.stringify(mydata)) ; 
+            localStorage.setItem("addtocart",JSON.stringify(mydata)) ; 
             window.location.reload();
         }
 
