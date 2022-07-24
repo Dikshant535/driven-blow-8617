@@ -843,9 +843,10 @@
           console.log(itemdata)
           //console.log(data)
           localStorage.setItem("additem", JSON.stringify(itemdata));
+          
           localStorage.setItem("addfav", JSON.stringify(itemfevert));
           
-          //window.location.href="prodelail.html"
+          window.location.href="prodetail.html"
       }
         
         append(data);
