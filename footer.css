@@ -1,3 +1,7 @@
+#footer{
+   margin-bottom: -20px;
+}
+
 #feedbackDiv{
     display: flex;
     text-align: center;
