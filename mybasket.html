@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="basket.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <title>MyBasket</title>
+    <!-- <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        #basCont{
+            border: 1px solid transparent;
+            width: 70%;
+            height: auto;
+            margin: auto;
+            margin-top: 30px;
+            margin-bottom: 40px;
+        }
+        #basCont>h1{
+            margin-bottom: 10px;
+        }
+        #basContIN{
+            border: 1px solid transparent;
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: flex-start;
+        }
+        #basCont1{
+            border: 1px solid transparent;
+            width: 60%;
+            margin-top: 25px;
+            height: auto;
+            background-color: #eeeeee;
+        }
+        
+        #basCont1>h3{
+            margin-left: 10px;
+            margin-top: 15px;
+            color: black;
+        }
+        #basCont1>div{
+            border: 1px solid transparent;
+            width: 95%;
+            height: auto;
+            margin: auto;
+            margin-top: 10px;
+            background-color: white;
+            margin-bottom: 20px;
+        }
+        #basCont1>div>div:first-child{
+            border: 1px solid transparent;
+            width: 100%;
+            height: auto;
+            margin: auto;
+            margin-bottom: 5px;
+        }
+        #basCont1 hr{
+            width: 96%;
+            margin: auto;
+            margin-bottom: 10px;
+        }
+
+        #addDefault{
+            border: 1px solid transparent;
+            width: 100%;
+            height: auto;
+            display: grid;
+        }
+        #addProbas{
+            border: 1px solid transparent;
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: auto;
+            gap: 10px;
+        }
+        #addProbas>div{
+            border: 1px solid transparent;  
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: 220px;
+            justify-content: flex-start;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        #addProbas>div>div{
+            border: 1px solid transparent;
+            height: auto;  
+        }
+       
+        #addProbas>div>div>img{
+            border: 1px solid transparent;
+            width: 100%;
+            height: 100%;
+        }
+        #imgprobas>h4{
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 7px;
+        }
+        #imgprobas>p{
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 7px; 
+        }
+        #imgprobas>select{
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 7px; 
+        }
+
+        #basCont1>div>div:first-child>div:first-child>div{
+            border: 1px solid transparent ;
+            width: 95%;
+            height: auto;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 8px;
+            margin-left: 2%;
+        }
+        #basCont1>div>div:first-child>div:first-child>div>div{      
+            border: 1px solid transparent;
+            width: 55%;
+            height: auto;
+            margin-left: 10px;
+        }
+        #basCont1>div>div:first-child>div:first-child>div>img{
+            width: 10%;
+        }
+        #basCont1>div>div:first-child>div:last-child{
+            border: 1px solid transparent;
+            width: 95%;
+            height: auto;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            margin-bottom: 25px;
+            margin-left: 2%;
+        }
+        #basCont1>div>div:first-child>div:last-child>div{
+            border: 1px solid grey ;
+            width: 50%;
+            height: auto;
+            margin: auto;
+            padding: 8px 1px;
+           
+        }
+        #basCont1>div>div:first-child>div:last-child>div:first-child{
+            display: flex;
+            align-items: center;
+        }
+        #basCont1>div>div:first-child>div:last-child>div:first-child>p{
+            text-align: center;
+            font-size: 15px;
+            line-height: 22px;
+        }
+        #basCont1>div>div:first-child>div:last-child>div:last-child{
+            margin-left: 2%;
+            display: flex;
+            align-items: center;
+        }
+        #basCont1>div>div:first-child>div:last-child>div:last-child>p{
+            text-align: center;
+            font-size: 15px;
+            line-height: 22px;
+        }
+        .sapnFree{
+            color: red;
+        }
+        .spanRR{
+            color: blue;
+        }
+
+
+        #basCont2{
+            border: 1px solid gray;
+            width: 35%;
+            height: 330px;
+            margin-top: 10px;
+            margin-left: 5%;
+            border-radius: 10px;
+        }
+        #basCont2 hr {
+            width: 95%;
+            margin: auto;
+            margin-bottom: 5px;
+        }
+        #basCont2>div{
+            border: 1px solid transparent;
+            width: 95%;
+            height: auto;
+            margin: auto;
+        }
+        #basCont2>div:first-child{
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+        #basCont2>div:first-child>p{
+            margin-left: 10px;
+            margin-top: 6px;
+        }
+        #basCont2>div:first-child>p:last-child{
+            margin-bottom: 6px;
+        }
+        #basCont2>div:last-child{
+            margin-bottom: 20px;
+        }
+        #basCont2>div:last-child>p,h3{
+            margin-left: 10px;
+            margin-top: 6px;
+        }
+        #basCont2>div:last-child>button{
+            display: block;
+            margin: auto;
+            width: 80%;
+            padding: 15px;
+            border-radius: 50px;
+            border-color: transparent;
+            font-size: 18px;
+        }
+        #basCont2>div:last-child>:nth-child(3){
+            margin-top: 20px;
+        }
+        #basCont2>div:last-child>:nth-child(4){
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            margin-top: 10px;
+            margin-bottom: 50px;
+        }
+        #basCont2>div:last-child>:nth-child(4)>img{
+            margin-top: 10px;
+            width:30% ;
+            height: 22px;
+            background-color: none;
+            margin-left: 10px;
+        
+        }
+
+        #addProbas>{
+            border:1px solid transparent
+        }
+        #btndefpro{
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        #btnbefore{
+            display: block;
+            margin: auto;
+            font-size: 18px;
+            padding: 15px 30px;
+            border-radius: 50px;
+            background-color: black;
+            color: white;
+            margin-bottom: 50px;
+        }
+        #basCont1>div>div:first-child>div:last-child>div:first-child>p{
+            text-align: center;
+            font-size: 15px;
+            line-height: 22px;
+        }
+    </style> -->
+</head>
+<body>
+    <div id="header" ">
+        <div id="top_header"><h3>Beauty Insiders: Earn Points Faster*▸ Not a Beauty Insider? Join now▸ Free shipping with code FREESHIP. *Terms apply.</h3></div>
+    <div id="search_bar">
+        <div id="logo"><img src="https://www.sephora.com/img/ufe/logo.svg"></div>
+        <div id="input_box"><input type="text" placeholder="Search..."></div>
+        <div id="services">
+            <div><img width="25px" height="30px" src="https://www.sephora.com/img/ufe/icons/stores-active.svg" alt=""></div>
+            <div><p>Store & Services</p>
+                <p>Choose your store</p>
+            </div>
+        </div>
+        <div id="community">
+            <img src="https://www.sephora.com/img/ufe/icons/community-active.svg">
+            <p>Community</p>
+        </div>
+        <div id="signin">
+            <img width="30px" src="https://www.sephora.com/img/ufe/icons/me-active.svg" alt="">
+            <a style="text-decoration:none;color:black;" href="login.html">Sign In</a>
+        </div>
+        
+        <div id="bag_div">
+        <div class="images">
+        <img src="./img/chat.jpg">
+        </div>
+        <div class ="images">
+        <img id="fab" src="./img/heart.svg">
+        </div>
+        <div class="images">
+        <img id="bag" src="./img/bag.jpg">
+        </div>
+        </div>
+    </div>
+    <div id="menubar">
+        <div id="below_inputbar">
+            <p id="new">New</p>
+            <p id="brand">Brands</p>
+            <p id="makeup">Makeup</p>
+            <p id="hair">Hair</p>
+            <p id="skincare" >Skincare</p>
+            <p id="frag">Fragrance</p>
+            <p id="tool">Tools & Brushes</p>
+            <p id="size">Mini size</p>
+            <p id="bath">Bath & Body</p>
+            <p id="gift">Gifts</p>
+            <p id="under">Beauty Under $20</p>
+            <p id="sale"> Sale & Offers</p>
+           </div>
+    </div>
+    </div>
+    <div id="basCont">
+        <h1>My Basket</h1>
+        <div id="basContIN">
+            <div id="basCont1">
+                <h3 id="countCartP"></h3>
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <img src="https://cdn.shopify.com/s/files/1/2793/9882/products/47c9eb2eb5bf3ca97e4b7bffb333ccf0_c2004e91-d1f3-4947-85ed-49e763a7cba4_720x.png?v=1568161382" alt="">
+                                <div><p style="color: black;">Enjoy free shipping with code <span class="sapnFree">FREESHIP</span>. <span class="spanRR">Free Returns</span>, see details/exclusions.*</p></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div><p style="color: black;">Get <b>2</b> free sample(s) with every order <b>SELECT YOUR SAMPLE(S)</b></p></div>
+                            <div><p style="color: black;">You now have <b>0</b> Beauty Insider points <b>REDEEM YOUR REWARDS</b></h1></p></div>
+                        </div>
+                    </div>
+                    <!-- <------For Product add -------->
+                        <hr>
+
+                    <div id="addDefault">
+                        <!-- <h3 id="basketH3">Your basket is currently empty.</h3>
+                        <button>Shop New Arrivals</button> -->
+                        <!-- <div id="addprobas" style="display: none;"></div> -->
+                    </div>   
+                    <div id="addProbas"></div>
+                    
+                </div>
+            </div>
+            <div id="basCont2">
+                <div>
+                    <p id="subtot" style="color: black;font-size: 17px;">Merchandise Subtotal</p>
+                    <p style="color: black;">Estimated Tax & Other Fees</p>
+                </div>
+                <hr>
+                <div>
+                    <h3 id="esTot" style="color: black;">Estimated Total</h3>
+                    <p style="color: black;">Shipping & taxes calculated during checkout</p>
+                    <button id="checkpage" style="font-size: 14px;">Checkout Shipped Items</button>
+                    <button id="paypage" style="font-size: 14px;">Pay With<img src="data:image/png;base64,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" alt=""></button>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+    <div id="footer">  
+        <div id="feedbackDiv">
+            <h4>Website feedback? Let us know ▸</h4>
+            </div>
+            <div id="foot">
+                <div id="below_footer">
+                    <div>
+                        <div class="tags">
+                            <img src="https://www.sephora.com/img/ufe/icons/find-store.svg" alt="">
+                            <div><p>Find a Store</p>
+                                <p>Choose Your Store</p></div>
+                         </div>
+                         <div class="tags">
+                            <img src="" alt="">
+                            <div><p>Live Beauty Help</p>
+                                <p>Chat Is Unavailable</p>
+                            </div>
+                         </div>
+                         <div class="tags">
+                            <img src="https://www.sephora.com/img/ufe/icons/app.svg" alt="">
+                           <div>
+                            <p>Get the App</p>
+                            <p>Text"APP" to 36681</p>
+                           </div>
+                         </div>
+                         <div class="tags">
+                            <img src="https://www.sephora.com/img/ufe/icons/sms-ko.svg" alt="">
+                            <div><p>Get Sephora Text Alert</p>
+                                <p>Sign up Now</p>
+                            </div>
+                         </div>
+                         <div class="tags">
+                            <img src="https://www.sephora.com/img/ufe/icons/cc-outline-ko.svg" alt="">
+                            <div>
+                                <p>Sephora Credit Card Program</p>
+                            <p>Want 25% off Sephora purchase?</p>
+                            </div>
+                         </div>
+                    </div>
+                    
+                </div>
+                <hr>
+                <div id="about">
+                     <div class="about_txt">
+                        <h3>About Sephora</h3>
+                        <p>About Sephora</p>
+                        <p>Newsroom</p>
+                        <p>Careers</p>
+                        <p>Sephora Social Impact</p>
+                        <p>Supply Chain Transparency</p>
+                        <p>Affiliates</p>
+                        <p>Sephora Events</p>
+                        <p>Gift Cards</p>
+                        <p>Sephora Global Sites</p>
+                        <p>Diversity and Inclusion</p>
+                        <p>Checkout on Instagram</p>
+                        <p>Sephora Accelerate</p>
+                        <p>Report a Vulnerability</p>
+                     </div>
+                     <div class="about_txt">
+                        <h3>My Sephora</h3>
+                        <p>Beauty Insider</p>
+                        <p>Sephora Credit Card</p>
+                        <p>Community Profile</p>
+                        <p>Order Status</p>
+                        <p>Purchase History</p>
+                        <p>Account Settings</p>
+                        <p>Beauty Advisor Recommendations</p>
+                        <p>Beauty Offers</p>
+                        <p>Quizzes & Buying Guides</p>
+                        <p>Rewards Bazaar</p>
+                        <p>Lovers</p>
+                        <p>Book a Reservation</p>
+                     </div>
+                     <div class="about_txt">
+                        <h3>Help</h3>
+                        <p>Customer Service</p>
+                        <p>Return & Exchanges</p>
+                        <p>Delivery and Pickup Options</p>
+                        <p>Shipping</p>
+                        <p>Billing</p>
+                        <p>International Shipments</p>
+                        <p>Beauty Services FAQ</p>
+                        <p>Sephora at Kohl's</p>
+                        <p>Sephora Inside JCPenney</p>
+                        <p>Store Locations</p>
+                        <p>Online Ordering</p>
+                        <p>Klama & Afterpay</p>
+                        <p>Accessibility</p>
+                     </div>
+                     <div class="language">
+                      <h3>Region & Language</h3>
+                      <div class="flags">
+                        <img src="https://www.sephora.com/img/ufe/flags/us.svg">
+                        <p>United States - English</p>
+                      </div>
+                      <div class="flags">
+                        <img src="https://www.sephora.com/img/ufe/flags/ca.svg">
+                        <p>Canada - English</p>
+                      </div>
+                      <div class="flags">
+                        <img src="https://www.sephora.com/img/ufe/flags/ca.svg">
+                        <p>Canada - Francais</p>
+                      </div>
+                    </div>
+                     <div class="mailbox">
+                        <div>
+                            <h1>We Belong to
+                                Something Beautiful</h1>
+                        </div>
+                        <div>
+                            <h3>Sign up for Sephora Emails</h3>
+                            <input type="email" placeholder="Enter your email address">
+                            <button>Sign Up</button>
+                        </div>
+                     </div>
+                </div>
+                <hr>
+                <div id="lastdiv">
+                    <div>
+                        <p>© 2022 Sephora USA, Inc. All rights reserved.</p>
+                        <div>
+                            <p>Privacy Policy</p>
+                            <p>Terms of Use</p>
+                            <p>Accessibility</p>
+                            <p>Sitemap</p>
+                            <p>CA - Do Not Sell My Personal Information</p>
+                        </div>
+                        <p>1-877-737-4672    TTY: 1-888-866-9845</p>
+                    </div>
+                    <div>
+            
+                    </div>
+            
+                </div>
+            
+            </div>
+    </div>
+</body>
+</html>
+<script src="./basket.js"></script>

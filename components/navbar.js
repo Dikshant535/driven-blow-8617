@@ -1,5 +1,6 @@
 let navbar = ()=>{
-    return `  <div id="top_header"><h3>Beauty Insiders: Earn Points Faster*▸ Not a Beauty Insider? Join now▸ Free shipping with code FREESHIP. *Terms apply.</h3></div>
+    return `  
+    <div id="top_header"><h3>Beauty Insiders: Earn Points Faster*▸ Not a Beauty Insider? Join now▸ Free shipping with code FREESHIP. *Terms apply.</h3></div>
     <div id="search_bar">
         <div id="logo"><img src="https://www.sephora.com/img/ufe/logo.svg"></div>
         <div id="input_box"><input type="text" placeholder="Search..."></div>

@@ -5,13 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout page</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
     <style>
         #form{
             border: 1px solid transparent;
             width: 50%;
             margin: auto;
-            margin-top: 60px;
+            margin-top: 30px;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            margin-bottom: 20px;
         }
         #form>input{
             width: 90%;
@@ -37,7 +40,9 @@
     </style>
 </head>
 <body>
-    <h1>Total Cart Value : $1200</h1>
+    <div id="header" ">
+    </div>
+    <h1 id="tocheck">Total Cart Value : $1200</h1>
     <form id="form">
         <h2>Checkout</h2>
         <hr>
@@ -46,12 +51,8 @@
         <input type="text" id="add" placeholder="Streer Address">
         <button>Confirm Your Order</button>
     </form>
+    <div id="footer">  
+    </div>
 </body>
 </html>
-<script>
-    document.getElementById("form").addEventListener("submit",function(){
-        event.preventDefault();
-        alert("<------Order Conformed------>");
-    });
-
-</script>
+<script src="./checkout.js" type="module"></script>
