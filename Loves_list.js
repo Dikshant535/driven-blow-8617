@@ -124,7 +124,7 @@ for (let i = arr.length - 1; i >= 0; i--) {
 // temp.push(obj);
 function removepro(x){
     temp.splice(x,1);
-    localStorage.setItem("addfev",JSON.stringify(temp));
+    localStorage.setItem("addfav",JSON.stringify(temp));
     lovedonce(temp);
 }
 lovedonce(temp);
