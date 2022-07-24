@@ -1,39 +1,19 @@
 // <---this is to test loves list --->
-let obj = {
-    img: "https://www.sephora.com/productimages/sku/s2296986-main-zoom.jpg?imwidth:612",
-    product_name: "AARS", // has to be bold
-    useTo: "Blush", // simple p tag
-    size: "Size 0.16 oz/ 4.8 g",
-    item: "1", // Item 229986
-    color: "Color: Orgasm X - shimmering deep coral with gold pearl",
-    price: 322,
 
-}
-let obj2 = {
-    img: "https://www.sephora.com/productimages/sku/s2296986-main-zoom.jpg?imwidth:612",
-    product_name: "ZARS", // has to be bold
-    useTo: "Blush", // simple p tag
-    size: "Size 0.16 oz/ 4.8 g",
-    item: "2",
-    color: "Color: Orgasm X - shimmering deep coral with gold pearl",
-    price: 42,
 
-}
-let obj3 = {
-    img: "https://www.sephora.com/productimages/sku/s2296986-main-zoom.jpg?imwidth:612",
-    product_name: "foundation", // has to be bold
-    useTo: "Blush", // simple p tag
-    size: "Size 0.16 oz/ 4.8 g",
-    item: "3",
-    color: "Color: Orgasm X - shimmering deep coral with gold pearl",
-    price: 12,
+// let obj = {
+//     "image": "https://www.sephora.com/productimages/sku/s2407286-main-zoom.jpg?imwidth=230",
+//     "name": "Charlotte Tilbury",
+//     "title": "Mini Hollywood Flawless Filter",
+//     "price": 345,
+//     "rating": "\u2605 \u2605 \u2605 \u2605 \u2606",
+//     "desc": "4 Colors",
+//     "id": 5
+// }
 
-}
+let arr = JSON.parse(localStorage.getItem("addfav")) || [];
 
-let arr = [];
-arr.push(obj);
-arr.push(obj2);
-arr.push(obj3);
+let cartsproduct = JSON.parse(localStorage.getItem("addtocart")) || [];
 
 function heart() {
     return `
@@ -63,6 +43,7 @@ function sorting() {
 
 function lovedonce(data) {
     if (data.length == 0) {
+        console.log("in");
         document.querySelector("#lovedOnce").innerHTML = biolerplate();
         return;
     }
@@ -73,9 +54,10 @@ function lovedonce(data) {
     let sharediv = document.createElement("div");
     sharediv.addEventListener("click", () => {
         popup();
-    })
+    });
 
     let share = document.createElement("p");
+    share.setAttribute("id","shareoption");
     let imgshare = document.createElement("img");
     imgshare.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvlvG8FskiqjLSc_bXldiH1gwd58y8isTrYw&usqp=CAU";
     share.innerText = "Share";
@@ -94,35 +76,38 @@ function lovedonce(data) {
         let box = document.createElement("div");
         box.setAttribute("class", "productInsideLoves");
         let img = document.createElement("img");
-        img.src = data[i].img;
+        img.src = data[i].image;
 
         let box2 = document.createElement("div");
         box2.setAttribute("class", "alldescription")
         let pn = document.createElement("p");
-        pn.innerText = data[i].product_name;
+        pn.innerText = data[i].name;
         let useTo = document.createElement("p");
-        useTo.innerText = data[i].useTo;
+        useTo.innerText = data[i].title;
         let size = document.createElement("p");
-        size.innerText = data[i].size;
-        let itemno = document.createElement("p");
-        itemno.innerText = data[i].item;
-        let colordes = document.createElement("p");
-        colordes.innerText = data[i].color;
+        size.innerText = data[i].rating;
+        let colors = document.createElement("p");
+        colors.innerText = data[i].desc;
 
-        box2.append(pn, useTo, size, itemno, colordes);
+        box2.append(pn, useTo, size,colors);
 
         let box3 = document.createElement("div");
 
         let price = document.createElement("p");
+        price.setAttribute("id","priceofloves")
         price.innerText = "$ " + data[i].price;
         box3.append(price);
         let button = document.createElement("button");
         button.innerText = "Add to Basket";
+        button.addEventListener("click",()=>{
+            cartsproduct.push(data[i]);
+            localStorage.setItem("addtocart",JSON.stringify(cartsproduct));
+        })
         button.setAttribute("id", "addtocartbutton")
         let remove = document.createElement("button");
         remove.innerHTML = heart();
         remove.addEventListener("click", () => {
-            removepro(data[i]);
+            removepro(i);
         })
         remove.setAttribute("class", "removefromloves")
         box.append(img, box2, box3, button, remove)
@@ -136,19 +121,12 @@ let temp = [];
 for (let i = arr.length - 1; i >= 0; i--) {
     temp.push(arr[i]);
 }
+// temp.push(obj);
 function removepro(x){
-    let ans = [];
-    for (let i = 0; i<temp.length; i++) {
-        if(temp[i].item != x.item){
-            // console.log(temp[i]);
-            ans.push(temp[i]);
-        }
-        temp = ans;
-    }
+    temp.splice(x,1);
+    localStorage.setItem("addfev",JSON.stringify(temp));
     lovedonce(temp);
-    // console.log(ans);
 }
-
 lovedonce(temp);
 
 
@@ -209,5 +187,68 @@ let copyTokeyboard = () => {
 }
 
 let remove_share_popup = () => {
+    
     document.querySelector("#sharepopup").innerHTML = "";
 }
+
+document.getElementById("logo").addEventListener("click",function(){
+    window.location.href = "index.html"
+})
+
+document.getElementById("bag").addEventListener("click",function(){
+    window.location.href = "mybasket.html"
+})
+
+document.getElementById("fab").addEventListener("click",function(){
+    window.location.href = "Loves_list.html"
+})
+
+
+
+
+document.getElementById("new").addEventListener("click",function(){
+    window.location.href = "pro.html"
+})
+
+document.getElementById("brand").addEventListener("click",function(){
+    window.location.href = "hair.html"
+})
+
+document.getElementById("makeup").addEventListener("click",function(){
+    window.location.href = "pro.html"
+})
+document.getElementById("skincare").addEventListener("click",function(){
+    window.location.href = "skin.html"
+})
+
+document.getElementById("hair").addEventListener("click",function(){
+    window.location.href = "hair.html"
+})
+
+document.getElementById("frag").addEventListener("click",function(){
+    window.location.href = "pro.html"
+})
+
+document.getElementById("tool").addEventListener("click",function(){
+    window.location.href = "skin.html"
+})
+
+document.getElementById("size").addEventListener("click",function(){
+    window.location.href = "hair.html"
+})
+
+document.getElementById("bath").addEventListener("click",function(){
+    window.location.href = "pro.html"
+})
+
+document.getElementById("gift").addEventListener("click",function(){
+    window.location.href = "skin.html"
+})
+
+document.getElementById("under").addEventListener("click",function(){
+    window.location.href = "hair.html"
+})
+
+document.getElementById("sale").addEventListener("click",function(){
+    window.location.href = "pro.html"
+})

@@ -24,7 +24,7 @@ function storeuserdata(){
     if(validation == true) {
         alert("with this credentials user already exits please check your credentials");
     }else{
-        window.location = "https://www.sephora.com";
+        window.location = "index.html";
         arr.push(obj);
         localStorage.setItem("users",JSON.stringify(arr));
     }
