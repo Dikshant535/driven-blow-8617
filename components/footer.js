@@ -1,6 +1,7 @@
 let footer =()=>{
-    return `<div id="feedbackDiv">
-    <h4>Website feedback? Let us know ▸</h4>
+    return `
+<div id="feedbackDiv">
+<h4>Website feedback? Let us know ▸</h4>
 </div>
 <div id="foot">
     <div id="below_footer">
