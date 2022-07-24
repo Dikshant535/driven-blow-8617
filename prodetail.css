@@ -1,8 +1,8 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
-}
+ 
+} */
 
  #container {
      display: grid;
@@ -218,7 +218,23 @@
 
 
 
+
  body {font-family: Arial, Helvetica, sans-serif;}
  * {box-sizing: border-box;}
  
  /* Button used to open the contact form - fixed at the bottom of the page */
+ .ship p{
+  color:black ;
+ }
+ .pick p{
+  color:black ;
+ }
+ body p{
+  color:black ;
+ }
+ .courses p{
+  color:black ;
+ }
+ .ProductTypeTittle p{
+  color:black ;
+ }
