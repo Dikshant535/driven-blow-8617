@@ -1,42 +1,6 @@
 
 
-  
-<<<<<<< HEAD
-  var proDetails=[
-    {
-        "image": "https://www.sephora.com/productimages/sku/s2462950-av-04-zoom.jpg?imwidth=612",
-        "name":"PAT McGRATH LABS",
-        "title": "Mini Hollywood Flawless Filter",
-        "price": 345,
-        "rating": "\u2605 \u2605 \u2605 \u2605 \u2606 12k",
-        "desc": "4 Colors available",
-        "id": 5,
-         reward:"*4 payments of $7.50 with Klarna or afterpay",
-         color:" Gloss™ Wicked Gloss™ Faux Real - coral pearlescent sheen",
-      }
- ]
-    //  let proDetails=JSON.parse(localStorage.getItem("additem")) || []
-    proDetails.map(function (elem){
-
-
-      // let baske=document.getElementById("#detailda");
-      // baske.innerHTML=null;
-
-      let imageda = document.getElementById("imageda");
-=======
-//   var proDetails=[
-//     {
-//         "image": "https://www.sephora.com/productimages/sku/s2462950-av-04-zoom.jpg?imwidth=612",
-//         "name":"PAT McGRATH LABS",
-//         "title": "Mini Hollywood Flawless Filter",
-//         "price": 345,
-//         "rating": "\u2605 \u2605 \u2605 \u2605 \u2606 12k",
-//         "desc": "4 Colors available",
-//         "id": 5,
-//          reward:"*4 payments of $7.50 with Klarna or afterpay",
-//          color:" Gloss™ Wicked Gloss™ Faux Real - coral pearlescent sheen",
-//       }
-//  ]
+ 
 
  
  let proDetails = JSON.parse(localStorage.getItem("additem")) || [];  //additem
@@ -44,7 +8,7 @@
     proDetails.map(function (elem){
 
      let imageda = document.getElementById("imageda");
->>>>>>> ae12b49f6831f89fa9cd8ab2b240d5066024a6b6
+
       let detailda = document.getElementById("detailda");
 
       let  detailed = document.getElementById("detailed")
