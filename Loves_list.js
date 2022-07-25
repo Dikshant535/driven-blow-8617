@@ -101,6 +101,7 @@ function lovedonce(data) {
         button.innerText = "Add to Basket";
         button.addEventListener("click",()=>{
             cartsproduct.push(data[i]);
+            alert("your product has been added to the wishlist");
             localStorage.setItem("addtocart",JSON.stringify(cartsproduct));
         })
         button.setAttribute("id", "addtocartbutton")
@@ -126,6 +127,10 @@ function removepro(x){
     temp.splice(x,1);
     localStorage.setItem("addfav",JSON.stringify(temp));
     lovedonce(temp);
+    setTimeout(()=>{
+        alert("product removed successfully");
+    },1000);
+    
 }
 lovedonce(temp);
 
@@ -184,6 +189,8 @@ let copyTokeyboard = () => {
     copyText.select();
     copyText.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(copyText.value);
+    alert("link copied successfully");
+    remove_share_popup();
 }
 
 let remove_share_popup = () => {

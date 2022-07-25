@@ -40,6 +40,7 @@ function verifymydetails() {
     }
     for (let i = 0; i < signedinUsers.length; i++) {
         if (signedinUsers[i].email == loginemail && signedinUsers[i].password == loginpassword) {
+            alert("signed in successfully");
             window.location = "index.html";
             return;
         }
